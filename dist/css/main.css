@@ -304,6 +304,12 @@ h4
     line-height: 16px;
 }
 
+h5
+{
+    font-size: 10px;
+    line-height: 11.49px;
+}
+
 p
 {
     font-size: 12px;
@@ -324,7 +330,6 @@ p
         flex-direction: column;
 
     width: 100vw;
-    margin: 30px auto;
     padding-bottom: 30px;
 
     -webkit-box-orient: vertical;
@@ -1118,6 +1123,8 @@ p
     {
             flex-direction: row;
 
+        margin: 30px auto;
+
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1228,7 +1235,7 @@ p
         gap: 10px;
     }
 
-    .title
+    .title__text
     {
         -webkit-filter: drop-shadow(4px 4px 0 rgba(0,0,0,.251));
                 filter: drop-shadow(4px 4px 0 rgba(0,0,0,.251));
@@ -1449,6 +1456,8 @@ p
         height: 100vh;
 
         pointer-events: none;
+
+        opacity: .7;
 
         -webkit-box-align: center;
         -ms-flex-align: center;
