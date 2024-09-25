@@ -1,0 +1,105 @@
+@font-face
+{
+    font-family: 'icons';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('fonts/icons.eot?aa9m0j');
+    src: url('fonts/icons.eot?aa9m0j#iefix') format('embedded-opentype'), url('fonts/icons.ttf?aa9m0j') format('truetype'), url('fonts/icons.woff?aa9m0j') format('woff'), url('fonts/icons.svg?aa9m0j#icons') format('svg');
+    font-display: block;
+}
+
+i
+{
+    font-family: 'icons' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    text-transform: none;
+
+    speak: never;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+i::before
+{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.icon-success:before
+{
+    content: '\e909';
+
+    color: #fff;
+}
+
+.icon-diamond:before
+{
+    content: '\e908';
+
+    color: #ffcf2d;
+}
+
+.icon-gift:before
+{
+    content: '\e907';
+
+    color: #9564aa;
+}
+
+.icon-exit:before
+{
+    content: '\e900';
+
+    color: #9564aa;
+}
+
+.icon-eye:before
+{
+    content: '\e901';
+
+    color: #9564aa;
+}
+
+.icon-like:before
+{
+    content: '\e902';
+
+    color: #9564aa;
+}
+
+.icon-message:before
+{
+    content: '\e903';
+
+    color: #9564aa;
+}
+
+.icon-photo:before
+{
+    content: '\e904';
+
+    color: #9564aa;
+}
+
+.icon-profile:before
+{
+    content: '\e905';
+
+    color: #9564aa;
+}
+
+.icon-settings:before
+{
+    content: '\e906';
+
+    color: #9564aa;
+}
+@supports (-webkit-appearance:none)
+{
+}

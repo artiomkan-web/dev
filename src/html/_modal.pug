@@ -1,0 +1,10 @@
+.modal 
+    .modal__window 
+        i.icon-close.modal__close 
+        h4.modal__title Заявка на Демо-доступ
+        h6.modal__subtitle Введите необходимые данные для успешной организации Демо-доступа
+        form.modal__form.form(action="", method="POST") 
+            input.form__input(type="text", placeholder="E-mail", required)
+            input.form__input._birthday(type="text", placeholder="ДД.ММ.ГГ", required)
+            input.form__input(type="text", placeholder="Время (GMT+3)", required)
+            button.form__send(type="submit") Оставить заявку

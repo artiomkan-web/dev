@@ -1,0 +1,51 @@
+- 
+    navLinks = [
+        {link: '#', name: 'People nearbu'},
+        {link: '#', name: 'Search '},
+        {link: '#', name: 'Premium', class: '_premium', icon: 'diamond'},
+    ]
+header.header
+    .header__container._container
+        button.burger: div
+        a.header__logo.logo(href="index.html")
+            span.logo__text Logo
+        for item in navLinks
+            if (item.class == '_premium')
+                li.menu__item(class=item.class, data-da='.menu__list, 912, last')
+                    a(href=item.link).menu__link=item.name
+                        if(item.icon != undefined)
+                            i.menu__icon(class='icon-' + item.icon)
+        nav.header__menu.menu
+            ul.menu__list
+                for item in navLinks
+                    if (item.class != '_premium')
+                        li.menu__item(class=item.class)
+                            a(href=item.link).menu__link=item.name
+                                if(item.icon != undefined)
+                                    i.menu__icon(class='icon-' + item.icon)
+
+            .sidebar(data-da=".wrapper,912,0")
+                .sidebar__profile.profile
+                    .profile__img: img(src='./img/attachments/profile.png')
+                    h2.profile__name Test2412
+                    h5.profile__premium GET PREMIUM
+                hr.sidebar__devider
+                .sidebar__list.list
+                    -
+                        list = [
+                            {link: '#', name: 'Profile', icon: 'profile'},
+                            {link: '#', name: 'My photos', icon: 'photo'},
+                            {link: '#', name: 'Messages', icon: 'message'},
+                            {link: '#', name: 'Favorites', icon: 'like'},
+                            {link: '#', name: 'Guests', icon: 'eye'},
+                            {link: '#', name: 'Settings', icon: 'settings'},
+                            {link: '#', name: 'Log out', icon: 'exit'},
+                        ]
+
+                    for item in list
+                        li.list__item
+                            a(href=item.link).list__link
+                                if(item.icon != undefined)
+                                    i.list__icon(class='icon-' + item.icon)
+                                =item.name
+                

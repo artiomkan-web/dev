@@ -1,0 +1,87 @@
+doctype html
+html(lang="ru")
+    head
+        title= Project
+        include html/_styles.pug
+    body
+        include html/_header.pug
+        .wrapper._container
+            .content
+                h1.title Закончились кредиты?
+                .discount
+                    h1.discount__title Скидка 40%
+                    h2.discount__text Предложение действует в течении:
+                    .discount__timer.timer
+                        h1.timer__value.timer__hours
+                        h1.timer__devider :
+                        h1.timer__value.timer__minutes
+                        h1.timer__devider :
+                        h1.timer__value.timer__seconds
+                .offers
+                    -
+                        list = [
+                            {price: '50', class: '_stock'},
+                            {price: '150'},
+                            {price: '300'},
+                            {price: '500'},
+                            {price: '1000'},
+                            {price: '1000', class: '_main'}
+                        ]
+                    .offers__list
+                        for item in list
+                            li.offers__item.offer(class=item.class)
+                                .offer__container
+                                    if (item.class == '_stock')
+                                        span.offer__note One time offer!
+                                    h2.offer__price
+                                        =item.price
+                                        span.offer__currency CR
+                                        span.offer__other
+                                            | /
+                                            ='$' + item.price/10
+                                    button.offer__btn Buy now
+                    button.offers__btn.btn Try now
+                    .offers__checkbox.checkbox
+                        input(type="checkbox")#checkbox
+                        label(for="checkbox")
+                            p
+                                | By clicking Checkbox you agree and accept our
+                                =" "
+                                a(href='#') Privacy Policy
+                                | ,
+                                =" "
+                                | and
+                                =" "
+                                a(href='#') Terms of use
+
+                .benefits
+                    .benefits__img.circle__img(data-da='.circle, 576, 0')
+                        img(src='./img/attachments/diamond.svg')
+                    .benefits__list
+                        -
+                            list = [
+                                {text: 'Отправлять сообщения', icon: 'message'},
+                                {text: 'Оплачивать подарки', icon: 'gift'},
+                                {text: 'Просматривать скрытые фото', icon: 'eye'},
+                                {text: 'Просматривать скрытые фото', icon: 'settings'},
+                                {text: 'Просматривать скрытые фото', icon: 'message'},
+                                {text: 'Пользоваться другими премиум функциями', icon: 'like'},
+                            ]
+                        for item in list
+                            h3.benefits__item.circle__item
+                                .benefits__icon
+                                    i(class='icon-' + item.icon)
+                                p.benefits__text
+                                    =item.text
+                    .circle
+                        svg(viewBox="0 0 100 100" class='circle__svg')
+                            circle(class="circle__anim" cx="51" cy="51" r="50")
+
+
+
+
+
+        include html/_footer.pug
+        .background
+            img(src='./img/background/bubbles.png')
+    include html/_scripts.pug

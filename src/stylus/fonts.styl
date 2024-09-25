@@ -1,0 +1,14 @@
+font(font_name, file_name, weight, style_type) {
+   @font-face {
+      font-family font_name
+      font-weight weight
+      font-style style_type
+      font-display swap
+      src url("../fonts/" + file_name + ".woff") format("woff"), url("../fonts/" + file_name + ".woff2") format("woff2")
+   }
+}
+ 
+font("icons", "icons", "400", "normal");
+font("Ubuntu", "Ubuntu-Bold", "700", "normal");
+font("Ubuntu", "Ubuntu-Regular", "400", "normal");
+font("Ubuntu", "Ubuntu-Medium", "500", "normal");
